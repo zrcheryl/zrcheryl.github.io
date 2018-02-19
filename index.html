@@ -14,6 +14,7 @@
         audioAutoPlay('bgaudio');//给个全局函数
     }, false);
     </script>
+	<link href='./images/icon.png' rel='icon' type='image/x-icon'/>
 	<link rel="stylesheet" href="http://www.2bgj.com:80/teamplate/tree/default.css" type="text/css"></link>
 	<link rel="stylesheet" href="http://www.2bgj.com:80/css/style.css" type="text/css"></link>
 	<style type="text/css">
@@ -35,13 +36,16 @@
   <div id="wrap">
     <div id="text">
       <div id="code">
-      	<span class="space">张睿小宝贝：</span><br><span class="space"></span><br><span class="space">我不能确定未来能否给你幸福，</span><br><span class="space"></span><br><span class="space">但是我发誓，我会一直努力让你幸福</span><br><span class="space"></span><br><span class="space">我不敢保证能让你过上住洋楼，</span><br><span class="space"></span><br><span class="space">但是我会努力争取让你幸福... </span><br><span class="space"></span><br><span class="space">我很喜欢写日记，</span><br><span class="space"></span><br><span class="space">可我日记里没有你。</span><br><span class="space"></span><br><span class="space">只因我的日记都记载着过去，</span><br><span class="space"></span><br><span class="space">而你在我的生命里，</span><br><span class="space"></span><br><span class="space">我想你陪我一起走过这世间的风雨，</span><br><span class="space"></span><br><span class="space">你愿意成为我永远的现在么?</span><br><span class="space"></span><br><span class="space"></span><br><span class="space">	      </span>
-        <span class="space"><span class="ml150"></span>--        柯磊 </span>
+      	<span class="space">Dear Rui：</span><br><span class="space"></span><br><span class="space">Shall I compare thee to a summer's day?</span><br><span class="space">Thou art more lovely and more temperate.</span><br><span class="space">Rough winds do shake the darling buds of May,</span><br><span class="space">And summer's lease hath all too short a date.
+</span><br><span class="space"></span><br><span class="space">Sometime too hot the eye of heaven shines,</span><br><span class="space">And often is his gold complexion dimmed;</span><br><span class="space">And every fair from fair sometime declines,
+ </span><br><span class="space">By chance or nature's changing course untrimmed.</span><br><span class="space"></span><br><span class="space">But thy eternal summer shall not fade,</span><br><span class="space">Nor lose possession of that fair thou ow'st,</span><br><span class="space">Nor shall Death brag thou wand'rest in his shade,</span><br><span class="space">When in eternal lines to time thou grow'st.</span><br><span class="space"></span><br><span class="space">So long as men can breathe or eyes can see,</span><br><span class="space">So long lives this, and this gives life to thee.</span><br><span class="space"></span><br><span class="space">Cite:" Shall I Compare Thee To A Summer's Day?"</span><br><span class="space">by William Shakespeare (1564-1616)
+</span><br><span class="space"></span><br><span class="space">	      </span>
+        <span class="space"><span class="ml150"></span>   --                 Lei Ke </span>
         <br>
       </div>
     </div>
     
-    <div id="clock-box"> <span class="STYLE1"></span><font color="yellow">我们相恋的日子</font></span>
+    <div id="clock-box"> <span class="STYLE1"></span><font color="yellow">Days we fall in love: </font></span>
       <div id="clock"></div>
     </div>
     <canvas id="canvas" width="1100" height="680"></canvas>
@@ -50,7 +54,7 @@
 		
 			
 				<div class="watermark">
-					<a href="http://www.tianox.com" target="_blank">L&R      柯磊大宝贝送给美美的张睿小宝贝</a>
+					<a ><b>L&R      柯磊大宝贝送给美美的张睿小宝贝</b></a>
 				</div>
 			
 		
@@ -198,7 +202,7 @@
             $("#clock-box").fadeIn(500);
             while (true) {
                 timeElapse(together);
-                $await(Jscex.Async.sleep(1000));
+                $await(Jscex.Async.sleep(100));
             }
         }));
 
