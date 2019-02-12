@@ -1,238 +1,176 @@
-<!DOCTYPE html>
 
-<html lang="en">
-  <head>
-    <title>恋爱100天</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="keywords" content="柯小磊和张大睿的恋爱纪念100天">
-    <script type="text/javascript">
-    //原理是在微信易信执行Ready之前，先注册事件，所以放在所有请求的最前面
-    document.addEventListener("WeixinJSBridgeReady", function () {
-        audioAutoPlay('bgaudio');//给个全局函数
-    }, false);
-    document.addEventListener('YixinJSBridgeReady', function() {
-        audioAutoPlay('bgaudio');//给个全局函数
-    }, false);
-    </script>
-	<link href='./images/icon.png' rel='icon' type='image/x-icon'/>
-	<link rel="stylesheet" href="http://www.2bgj.com:80/teamplate/tree/default.css" type="text/css"></link>
-	<link rel="stylesheet" href="http://www.2bgj.com:80/css/style.css" type="text/css"></link>
-	<style type="text/css">
-		.STYLE1 {
-			color: #666666
-		}
-		#code {
-			color: #FFFFFF;
-			font-size: 16px;
-		}
-	</style>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Lei Ke's Homepage</title>
 
-  </head>
-  <body style="background-color: #FFACFF">
+<link rel="stylesheet" type="text/css" href="webstyle.css" />
+<link rel="shortcut icon" href="./image/icon/DecisionTree.png" media="screen" />
 
-<input type="hidden" id = "loveDate" value='2014-07-16 00:00:00' >
-<div id="main">
-  <div id="error">亲爱的，你的浏览器无法显示HTML5的内容哦，请换成谷歌或火狐等浏览器</div>
-  <div id="wrap">
-    <div id="text">
-      <div id="code">
-      	<span class="space">Dear Rui：</span><br><span class="space"></span><br><span class="space">Shall I compare thee to a summer's day?</span><br><span class="space">Thou art more lovely and more temperate.</span><br><span class="space">Rough winds do shake the darling buds of May,</span><br><span class="space">And summer's lease hath all too short a date.
-</span><br><span class="space"></span><br><span class="space">Sometime too hot the eye of heaven shines,</span><br><span class="space">And often is his gold complexion dimmed;</span><br><span class="space">And every fair from fair sometime declines,
- </span><br><span class="space">By chance or nature's changing course untrimmed.</span><br><span class="space"></span><br><span class="space">But thy eternal summer shall not fade,</span><br><span class="space">Nor lose possession of that fair thou ow'st,</span><br><span class="space">Nor shall Death brag thou wand'rest in his shade,</span><br><span class="space">When in eternal lines to time thou grow'st.</span><br><span class="space"></span><br><span class="space">So long as men can breathe or eyes can see,</span><br><span class="space">So long lives this, and this gives life to thee.</span><br><span class="space"></span><br><span class="space">Cite:" Shall I Compare Thee To A Summer's Day?"</span><br><span class="space">by William Shakespeare (1564-1616)
-</span><br><span class="space"></span><br><span class="space">	      </span>
-        <span class="space"><span class="ml150"></span>           --                 Lei Ke </span>
-        <br>
-      </div>
-    </div>
+<script type="text/javascript" src="snowstorm.js"></script>
+
+<script type="text/javascript" async="" src="./files/ga.js"></script><script type="text/javascript">
     
-    <div id="clock-box"> <span class="STYLE1"></span><font color="yellow">Days we fall in love: </font></span>
-      <div id="clock"></div>
-    </div>
-    <canvas id="canvas" width="1100" height="680"></canvas>
-  </div>
-	
-		
-			
-				<div class="watermark">
-					<a ><b>L&R      送给美美的张睿小宝贝 写在恋爱100天</b></a>
-				</div>
-			
-		
-	
-</div>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/jquery.min.js"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/js/autoplay.js"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/jscex.min.js"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/jscex-parser.js"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/jscex-jit.js"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/jscex-builderbase.min.js"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/jscex-async.min.js"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/jscex-async-powerpack.min.js"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/functions.js" charset="utf-8"></script>
-<script type="text/javascript" src="http://www.2bgj.com:80/teamplate/tree/love.js" charset="utf-8"></script>
-<script>
-    (function () {
-        var canvas = $('#canvas');
-
-        if (!canvas[0].getContext) {
-            $("#error").show();
-            return false;
-        }
-
-        var width = canvas.width();
-        var height = canvas.height();
-        canvas.attr("width", width);
-        canvas.attr("height", height);
-        var opts = {
-            seed: {
-                x: width / 2 - 20,
-                color: "rgb(190, 26, 37)",
-                scale: 2
-            },
-            branch: [
-                [535, 680, 570, 250, 500, 200, 30, 100, [
-                    [540, 500, 455, 417, 340, 400, 13, 100, [
-                        [450, 435, 434, 430, 394, 395, 2, 40]
-                    ]],
-                    [550, 445, 600, 356, 680, 345, 12, 100, [
-                        [578, 400, 648, 409, 661, 426, 3, 80]
-                    ]],
-                    [539, 281, 537, 248, 534, 217, 3, 40],
-                    [546, 397, 413, 247, 328, 244, 9, 80, [
-                        [427, 286, 383, 253, 371, 205, 2, 40],
-                        [498, 345, 435, 315, 395, 330, 4, 60]
-                    ]],
-                    [546, 357, 608, 252, 678, 221, 6, 100, [
-                        [590, 293, 646, 277, 648, 271, 2, 80]
-                    ]]
-                ]]
-            ],
-            bloom: {
-                num: 700,
-                width: 1080,
-                height: 650,
-            },
-            footer: {
-                width: 1200,
-                height: 5,
-                speed: 10,
-            }
-        }
-
-        var tree = new Tree(canvas[0], width, height, opts);
-        var seed = tree.seed;
-        var foot = tree.footer;
-        var hold = 1;
-
-        canvas.click(function (e) {
-            var offset = canvas.offset(), x, y;
-            x = e.pageX - offset.left;
-            y = e.pageY - offset.top;
-            if (seed.hover(x, y)) {
-                hold = 0;
-                canvas.unbind("click");
-                canvas.unbind("mousemove");
-                canvas.removeClass('hand');
-            }
-        }).mousemove(function (e) {
-            var offset = canvas.offset(), x, y;
-            x = e.pageX - offset.left;
-            y = e.pageY - offset.top;
-            canvas.toggleClass('hand', seed.hover(x, y));
-        });
-
-        var seedAnimate = eval(Jscex.compile("async", function () {
-            seed.draw();
-            while (hold) {
-                $await(Jscex.Async.sleep(10));
-            }
-            while (seed.canScale()) {
-                seed.scale(0.95);
-                $await(Jscex.Async.sleep(10));
-            }
-            while (seed.canMove()) {
-                seed.move(0, 2);
-                foot.draw();
-                $await(Jscex.Async.sleep(10));
-            }
-        }));
-
-        var growAnimate = eval(Jscex.compile("async", function () {
-            do {
-                tree.grow();
-                $await(Jscex.Async.sleep(10));
-            } while (tree.canGrow());
-        }));
-
-        var flowAnimate = eval(Jscex.compile("async", function () {
-            do {
-                tree.flower(2);
-                $await(Jscex.Async.sleep(10));
-            } while (tree.canFlower());
-        }));
-
-        var moveAnimate = eval(Jscex.compile("async", function () {
-            tree.snapshot("p1", 240, 0, 610, 680);
-            while (tree.move("p1", 500, 0)) {
-                foot.draw();
-                $await(Jscex.Async.sleep(10));
-            }
-            foot.draw();
-            tree.snapshot("p2", 500, 0, 610, 680);
-
-            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-            canvas.css("background", "#ffe");
-            $await(Jscex.Async.sleep(300));
-            canvas.css("background", "none");
-        }));
-
-        var jumpAnimate = eval(Jscex.compile("async", function () {
-            var ctx = tree.ctx;
-            while (true) {
-                tree.ctx.clearRect(0, 0, width, height);
-                tree.jump();
-                foot.draw();
-                $await(Jscex.Async.sleep(25));
-            }
-        }));
-
-        var textAnimate = eval(Jscex.compile("async", function () {
-            var together = new Date(Date.parse("Fri Nov 10 10:00:00 CST 2017".replace(/-/g,  "/"))); 
-            $("#code").show().typewriter();
-            $("#clock-box").fadeIn(500);
-            while (true) {
-                timeElapse(together);
-                $await(Jscex.Async.sleep(100));
-            }
-        }));
-
-        var runAsync = eval(Jscex.compile("async", function () {
-            $await(seedAnimate());
-            $await(growAnimate());
-            $await(flowAnimate());
-            $await(moveAnimate());
-
-            textAnimate().start();
-
-            $await(jumpAnimate());
-        }));
-
-        runAsync().start();
-    })();
-    </script>
-    <div style="display: none">
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?1de51c7a10685de3e9dd75efe6bc84dc";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39824124-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
 </script>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=28528923&auto=1&height=32"></iframe>
 
-		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256941446'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1256941446' type='text/javascript'%3E%3C/script%3E"));</script>
-	</div>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk"></head>
+<meta name="robots" content="index, follow" />
+<meta name="title" content="Rui Zhang's Homepage" >
+<meta name="keywords" content="Rui Zhang, Rui Zhang Tongji, Environment, Tongji University" />
+<meta name="description" content="Rui Zhang's Homepage,Tongji University" />
+<meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+
+
+<body>
+<table border="0" width="100%">
+  <tbody><tr>
+    <td width="300"><img src="./image/head.jpg" width="260" height="260"></td>
+    <td width="20"></td>
+    <td width="1180"><table border="0" width="100%">
+      <tbody><tr height="10">
+        <td></td></tr>
+      <tr height="55">
+        <td><p class="title-large3">Rui Zhang（张睿）</p></td></tr>
+      <tr height="10"></tr>
+      <tr height="5">
+         <td><div id="menu">
+					<p class="menulinks">
+					<a class="menulink active" href="index.html">Home</a>
+					<a class="menulink" href="#bio">Bio</a>
+					<a class="menulink" href="#intern">Intern</a>
+					<a class="menulink" href="#researh">Research</a>
+					<a class="menulink" href="#project">Project</a>
+					<a class="menulink" href="#award">Award</a>
+         <!--  <a class="menulink" href="./blogs/bloglist.html">Blogs</a> -->
+		  </p>
+	      </div>	</td>
+		  
+	  </tr>
+    
+      <tr height="50">
+        <td><p class="title-large2">Some call them nuts. I call them hackers.</p></td>
+	  </tr>
+      <tr height="50">
+        <td>
+		  <p class="margin">&nbsp;</p>
+          <p class="content"><img src=./image/icon/email.png width="16" height="16"><strong>&nbsp;Email: &nbsp;</strong><a href="mailto:keleiwhu@163.com">keleiwhu@163.com</a></p>
+		  <p class="margin">&nbsp;</p>
+		  <p class="content"><img src=./image/icon/gitos.png width="16" height="16"><strong>&nbsp;GitOSChina(码云): &nbsp;</strong><a href="https://git.oschina.net/whuiss" target="_blank">git.oschina.net/whuiss</a></p>
+		  <p class="margin">&nbsp;</p>
+		  <p class="content"><img src=./image/icon/github.png width="16" height="16"><i class="icon-github"></i><strong>&nbsp;GitHub: &nbsp;</strong><a href="https://github.com/Pony-Kelei" target="_blank">github.com/Pony-Kelei</a></p>
+		  <p class="margin">&nbsp;</p>
+      <p class="content"><img src=./image/icon/address.png width="16" height="16"><strong>&nbsp;Address: &nbsp;</strong>Luo Yu Road No.37,Wuhan University</p>
+		  <p class="margin">&nbsp;</p>
+          </td></tr>
+      <tr height="20">
+        <td></td></tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+
+<p class="margin">&nbsp;</p>
+<p class="margin">&nbsp;</p>
+<p class="title-large"><a name="bio">BIO</a></p>
+<p class="margin">&nbsp;</p>
+<p class="margin">&nbsp;</p>
+<p><strong>Lei Ke</strong>, UNDERGRADUATE (-2018)<a href=http://www.whu.edu.cn target="_blank"> @WUHAN UNIVERSITY</a>, Department of Software Engineering. Familiar with C + +, Python and QT framework, skilled use of Caffe ,Pytorch ,OpenCV and other third-party library.</p>
+<p class="margin">&nbsp;</p>
+<p><strong>Interest Direction: Vision & Language</strong></P>
+<p class="margin-small">&nbsp;</p>
+
+<p id="sect-publications" class="title-large1">&nbsp;</p>
+<p class="title-large"><a name="intern">Intern</a></p>
+<p class="margin">&nbsp;</p>
+<p class="margin">&nbsp;</p>
+<p><strong> 2017.11-,</strong><a href=http://youtu.qq.com/index.html target="_blank"> @YouTu Lab, Tencent</a>, Machine Learning Group, Shenzhen.</p>
+<p class="margin">&nbsp;</p>
+<p><strong> 2017.6-2017.9,</strong><a href=http://www.alibabagroup.com target="_blank"> @Alibaba Group</a>, Technical Department of Taobao, Hangzhou.</p>
+<p class="margin">&nbsp;</p>
+
+
+<p id="sect-publications" class="title-large1">&nbsp;</p>
+<p class="title-large"><a name="researh">RESEARCH</a></p>
+<p class="title-large1">&nbsp;</p>
+<p class="title-large1">Emotional analysis combined with social media:</p>
+
+<ul><li><p class="STYLE24"> 1.Wang Z, <strong>Ke L</strong>, Cui X, et al. Monitoring Environmental Quality by Sniffing Social Media[J]. <strong>Sustainability</strong>, 2017, 9(2): 85.<a href="http://www.mdpi.com/2071-1050/9/2/85/htm" target="_blank">[pdf]</a>.</p>
+<p class="STYLE20">&nbsp;</p>
+</li>
+  <li><p class="STYLE24">2.Wang, Z., Cui, X., Gao, L., Yin, Q., <strong>Ke, L.</strong>, & Zhang, S. (2016). A hybrid model of sentimental entity recognition on mobile social media. <strong>EURASIP Journal on Wireless Communications and Networking</strong>, 2016(1), 253.<a href="http://jwcn.eurasipjournals.springeropen.com/articles/10.1186/s13638-016-0745-7" target="_blank">[pdf]</a>.</p>
+</li>
+</ul>
+
+<p class="margin">&nbsp;</p>
+<p class="margin">&nbsp;</p>
+<p class="margin">&nbsp;</p>
+<p class="margin">&nbsp;</p>
+<p class="margin">&nbsp;</p>
+<p class="margin">&nbsp;</p>
+
+
+<p class="title-large"><a name="project">PROJECT</a></p>
+<p class="STYLE20">&nbsp;</p>
+<p class="STYLE20">Major participation in the project and competition during the undergraduate period: </p>
+<p>&nbsp;</p>
+<p><span class="title-large1"><strong>Emotional Analysis Based on Social Media(2016.5-2016.9)</strong></span></p>
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+  <tbody><tr>
+    <td width="10%"><a href="http://www.mdpi.com/2071-1050/9/2/85/htm" target="_blank"><img src="./image/sustainability.png" width="206" height="130"></a></td>
+	<td width="5%"></td>
+    <td width="75%"><p class="STYLE20">We crawled large amounts of text data from Sina microblog,screened out the data with the environment (rivers, food safety, air quality, etc.)relation by time and geographical classification in the pretreatment(including invalid word filtering, Chinese word segmentation, etc.). We utilized SVM(Support Vector Machine) algorithm to make emotional analysis and determine the emotional tendencies of the text.Then, we further modeled the integrated attitude of residents from all over the country about environment quality(unit: province), gived out the environmental quality reference rankings, and made the comparison with the authoritative data published by CAS(Chinese Academy of Sciences). The corresponding project result was published in the SCI journal SUSTAINABILITY ,second author.Paper title:《Monitoring Environmental Quality by Sniffing Social Media》(<a href="http://www.mdpi.com/2071-1050/9/2/85/htm" target="_blank">http://www.mdpi.com/2071-1050/9/2/85/htm</a>).</p></td>
+  </tr>
+</tbody></table>
+<p class="STYLE20">&nbsp;</p>
+
+<p class="STYLE20"><span class="title-large1"><strong>Face Recognition(2016.10-2016.12)</strong></span></p>
+<p class="STYLE20">&nbsp;</p>
+<p class="STYLE20"> </p>
+
+<table border="0" width="100%">
+  <tbody><tr>
+    <td width="10%"><a href="https://git.oschina.net/Alfred_Zhang/face_recognition" target="_blank"><img src="./image/eigenface.png" width="206" height="130"></a></td>
+	<td width="5%"></td>
+    <td width="75%"><p class="STYLE20">Participated in the the First National Network Public Opinion Analysis Technology Invitation organized by Chinese Academy of Sciences Information Engineering,face recognition direction,project leader.During the finals in Beijing,we made face recognition detection on the twenty thousand minutes of video.Our algorithm was based on PCA and SVM, utilizing OpenCV and some other third-party library.We finally won the Fifth(The first is the SenseTime).Also,we were the only undergraduate team in the finalists of the competition.Project open source address：<a href="https://git.oschina.net/Alfred_Zhang/face_recognition" target="_blank">https://git.oschina.net/Alfred_Zhang/face_recognition</a></p></td>
+  </tr>
+</tbody></table>
+
+<p class="STYLE20">&nbsp;</p>
+<p class="STYLE20"><span class="title-large1"><strong>Similarity Measure of Trajectory Data(2016.3-2016.6)</strong></span></p>
+<p class="STYLE20">&nbsp;</p>
+<p class="STYLE20"> </p>
+
+<table border="0" width="100%">
+  <tbody><tr>
+    <td width="10%"><a href="https://git.oschina.net/Alfred_Zhang/face_recognition" target="_blank"><img src="./image/frechet.jpg" width="206" height="130"></a></td>
+	<td width="5%"></td>
+    <td width="75%"><p class="STYLE20">Participated in the Fifth "China Software Cup" National Student Software Design Competition sponsored by the Ministry of Education and Ministry of Industry and Information.Our selected problem was to make similarity measure of trajectory data based on latitude and longitude information.We implemented Frechet distance algorithm based on C ++ and utilized QT (GUI).This algorithm was used to calculate the track point and trajectory segment of the similarity.We successfully passed the national preliminary round and the project eventually won the national second prize in August in Nanjing finals. Project open source address：<a href="https://git.oschina.net/Alfred_Zhang/CnSoft" target="_blank">https://git.oschina.net/Alfred_Zhang/CnSoft</a></p></td>
+  </tr>
+</tbody></table>
+<p class="STYLE20">&nbsp;</p>
+
+<p class="title-large"><a name="award">AWARDS</a></p>
+<p class="STYLE20">&nbsp;</p>
+<p class="STYLE20"><a href=http://www.comap-math.com/mcm/2017Certs/55832.pdf target="_blank">2017, COMAP's Mathematical Contest in Modeling, Honorable prize</a></p>
+<p class="STYLE20">2015 - 2017, Excellent Student Scholarship in Wuhan University </p>
+<p class="STYLE20">2016, The Fifth "China Software Cup" National Student Software Design Competition, Second prize </p>
+<p class="STYLE20">2016, The First National Network Public Opinion Analysis Technology Invitation, face recognition project, Team leader </p>
+<p class="STYLE20">2016, National Inspirational Scholarship, Wuhan University </p>
+<p class="STYLE20">2015, National College Students Mathematics Competition ,Third Prize</p>
+
+<p class="STYLE20"></p>
+<p class="STYLE20">&nbsp;</p>
+<p class="STYLE20">Last updated by Lei Ke, November 2017.</p>
 </body>
 </html>
